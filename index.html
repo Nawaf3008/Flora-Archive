@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An independent botanical observatory documenting plant life, ecology, and field observations." />
+  <title>Flora Archive — Independent Botanical Observatory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain"></div>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Flora Archive home"><span class="mark">✦</span> FLORA<br><i>ARCHIVE</i></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a><a href="#journal">Field Journal</a><a href="#species">Species Archive</a><a href="#projects">Projects</a>
+      <button class="nav-more" aria-expanded="false">Explore <span>⌄</span></button>
+      <div class="more-menu"><a href="#notes">Research Notes</a><a href="#map">Interactive Map</a><a href="#gallery">Photography</a><a href="#resources">Resources</a></div>
+    </nav>
+    <div class="header-actions"><button class="icon-btn search-open" aria-label="Open search">⌕</button><button class="icon-btn theme-toggle" aria-label="Switch colour theme">◐</button><button class="menu-btn" aria-label="Open menu">☰</button></div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Independent botanical observatory</p>
+        <h1>Attention is<br>the beginning of<br><em>understanding.</em></h1>
+        <p class="hero-text">A living record of plants, places, and the quiet systems that connect them—observed slowly, documented carefully, and shared openly.</p>
+        <div class="hero-actions"><a class="button primary" href="#journal">Enter the field journal <span>→</span></a><a class="text-link" href="#about">About this project <span>↗</span></a></div>
+      </div>
+      <div class="hero-image reveal">
+        <img src="https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?auto=format&fit=crop&w=1600&q=85" alt="Dried wildflower stems against a soft natural background" />
+        <div class="image-caption"><span>FIELD IMAGE 024</span><i>Summer grasslands, 2024</i></div>
+        <div class="hero-stamp"><span>01</span><small>Years of<br>quiet looking</small></div>
+      </div>
+      <a class="scroll-cue" href="#journal"><span></span> Scroll to observe</a>
+    </section>
+
+    <section class="intro section-pad" id="about">
+      <p class="eyebrow"><span></span> A practice of patient observation</p>
+      <div class="intro-grid"><h2>Making room for<br><em>the overlooked.</em></h2><div><p>This archive is an independent, long-term study of botanical life. It is a place for field notes, imperfect experiments, photographs, questions, and the slow accumulation of knowledge.</p><a class="text-link" href="#projects">Read the full mission <span>→</span></a></div></div>
+    </section>
+
+    <section class="stats section-pad">
+      <div class="stat"><strong data-count="247">0</strong><span>Species documented</span></div><div class="stat"><strong data-count="684">0</strong><span>Field observations</span></div><div class="stat"><strong data-count="9">0</strong><span>Active research projects</span></div><div class="stat"><strong data-count="1280">0</strong><span>Hours spent observing</span></div>
+    </section>
+
+    <section class="journal section-pad" id="journal">
+      <div class="section-heading"><div><p class="eyebrow"><span></span> From the field journal</p><h2>Recent <em>observations</em></h2></div><a class="text-link" href="#journal">View all entries <span>→</span></a></div>
+      <div class="journal-grid">
+        <article class="feature-entry card reveal"><img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1200&q=85" alt="Fern leaves in a green forest" /><div class="entry-content"><p class="meta">OBSERVATION 084 · 18 JUNE 2025</p><h3>The ferns return to the north-facing slope</h3><p>After a dry spring, a shaded pocket of the woodland has become unexpectedly abundant.</p><div class="tag-row"><span>Phenology</span><span>Woodland</span><span>Moisture</span></div></div></article>
+        <div class="entry-list">
+          <article class="list-entry"><p class="meta">OBSERVATION 083 · 12 JUNE 2025</p><h3>Pollinator activity in <em>Salvia officinalis</em></h3><p>Four bee species documented over two early-morning hours.</p><a href="#journal" aria-label="Read observation">↗</a></article>
+          <article class="list-entry"><p class="meta">OBSERVATION 082 · 04 JUNE 2025</p><h3>Seed dispersal along the dry wadi</h3><p>A small catalogue of wind-adapted seed structures.</p><a href="#journal" aria-label="Read observation">↗</a></article>
+          <article class="list-entry"><p class="meta">OBSERVATION 081 · 29 MAY 2025</p><h3>First flowers of the summer season</h3><p>Notes on colour, timing, and shifting ground temperature.</p><a href="#journal" aria-label="Read observation">↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="species section-pad" id="species">
+      <div class="species-photo"><img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1300&q=85" alt="Detailed view of lush green leaves" /><div class="vertical-label">SPECIES ARCHIVE</div></div>
+      <div class="species-copy"><p class="eyebrow"><span></span> Growing collection</p><h2>Every species<br>has a <em>story.</em></h2><p>Browse an evolving archive of native plants, their habitats, ecological relationships, and the moments in which they were encountered.</p><div class="species-search"><input id="speciesInput" placeholder="Search by common or scientific name" aria-label="Search species" /><button id="speciesSearch" aria-label="Search species">→</button></div><p class="micro">Browse by <a href="#species">family</a> · <a href="#species">habitat</a> · <a href="#species">alphabetically</a></p></div>
+    </section>
+
+    <section class="projects section-pad" id="projects"><div class="section-heading"><div><p class="eyebrow"><span></span> Current inquiry</p><h2>Field <em>projects</em></h2></div><a class="text-link" href="#projects">All projects <span>→</span></a></div><div class="project-grid">
+      <article class="project-card"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Mountainous desert landscape" /><div><p class="meta">ONGOING · 2025—</p><h3>Life at the edge of water</h3><p>Plant adaptation across a seasonal desert watershed.</p></div></article>
+      <article class="project-card offset"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=85" alt="Misty forest lake" /><div><p class="meta">ONGOING · 2024—</p><h3>A small atlas of urban mosses</h3><p>Finding biodiversity in overlooked city surfaces.</p></div></article>
+      <article class="project-card"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=85" alt="Close up of flowering plant" /><div><p class="meta">ARCHIVE · 2023—24</p><h3>Seeds, waiting</h3><p>A photographic study of form, dormancy, and renewal.</p></div></article>
+    </div></section>
+
+    <section class="map-section section-pad" id="map"><div class="map-copy"><p class="eyebrow"><span></span> Places observed</p><h2>A geography of<br><em>attention.</em></h2><p>Each point marks a place where a question began. Explore observations by species, date, habitat, and field method.</p><a class="button dark" href="#map">Explore the map <span>→</span></a></div><div class="map-art" aria-label="Stylized observation map"><svg viewBox="0 0 700 390" role="img"><path d="M70 92c74-51 153-40 204-16 26 12 52-10 82 4 27 13 59 5 86 35 21 23 59 23 75 45 20 27 91 43 70 92-30 68-123 13-163 35-45 25-123 38-156 5-36-36-76-13-117-47-34-28-116-20-102-63 8-26 2-43 21-61Z"/><path d="M241 249c37-14 66 2 85 21 22 21 59 9 75 39 13 25-14 57-43 48-22-7-41 7-57-12-21-25-65-12-76-45-7-21-5-40 16-51Z"/></svg><span class="pin p1">✦</span><span class="pin p2">✦</span><span class="pin p3">✦</span><span class="map-note">684 OBSERVATIONS<br>ACROSS 12 REGIONS</span></div></section>
+
+    <section class="notes section-pad" id="notes"><div class="notes-top"><p class="eyebrow"><span></span> Thinking in public</p><h2>Research <em>notes</em></h2><p>Working ideas, methods, and questions—not conclusions carved in stone.</p></div><div class="notes-grid"><article><span>01</span><p class="meta">PLANT PHYSIOLOGY</p><h3>What does heat feel like to a leaf?</h3><a href="#notes">Read note →</a></article><article><span>02</span><p class="meta">ECOLOGY</p><h3>On noticing absence in a familiar habitat</h3><a href="#notes">Read note →</a></article><article><span>03</span><p class="meta">METHOD</p><h3>A case for recording the failed attempts</h3><a href="#notes">Read note →</a></article></div></section>
+
+    <section class="gallery section-pad" id="gallery"><div class="section-heading"><div><p class="eyebrow"><span></span> A visual record</p><h2>Through the <em>lens</em></h2></div><button class="text-link gallery-open">Open gallery <span>↗</span></button></div><div class="gallery-grid"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85" alt="Pink flowers in sunlight" /><img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=85" alt="Green ferns" /><img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=900&q=85" alt="Purple wildflowers" /><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=85" alt="Forest canopy" /></div></section>
+
+    <section class="newsletter"><p class="eyebrow"><span></span> Occasional dispatches from the field</p><h2>For those who like<br>to <em>look closer.</em></h2><form id="newsletterForm"><label class="sr-only" for="email">Email address</label><input id="email" type="email" placeholder="Your email address" required /><button class="button primary">Subscribe <span>→</span></button></form><p class="form-note" id="formNote">No noise. Only occasional notes, field discoveries, and new work.</p></section>
+  </main>
+  <footer id="resources"><div class="footer-brand"><a class="wordmark" href="#home"><span class="mark">✦</span> FLORA<br><i>ARCHIVE</i></a><p>An independent record of plant life,<br>made with curiosity and care.</p></div><div><p class="meta">EXPLORE</p><a href="#journal">Field Journal</a><a href="#species">Species Archive</a><a href="#projects">Projects</a><a href="#notes">Research Notes</a></div><div><p class="meta">CONNECT</p><a href="mailto:hello@example.com">Email</a><a href="#">iNaturalist</a><a href="#">ORCID</a><a href="#">Instagram</a></div><div class="footer-bottom">© <span id="year"></span> Flora Archive<br>Made for the long view.</div></footer>
+  <div class="search-modal" id="searchModal" aria-hidden="true"><button class="modal-close" aria-label="Close search">×</button><div><p class="eyebrow"><span></span> Search the archive</p><input id="globalSearch" placeholder="Try “desert”, “pollination”, or a species name" autofocus /><div id="searchResults"><p>Search across observations, species, research notes, projects, and resources.</p></div></div></div>
+  <div class="lightbox" id="lightbox" aria-hidden="true"><button class="modal-close" aria-label="Close gallery">×</button><img src="" alt="" /></div>
+  <script src="script.js"></script>
+</body>
+</html>
