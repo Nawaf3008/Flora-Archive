@@ -19,7 +19,7 @@
       font-family: "DM Sans", sans-serif;
     }
     .dossier-wrapper {
-      max-width: 700px;
+      max-width: 1000px;
       margin: 0 auto;
     }
     .back-nav {
@@ -32,9 +32,7 @@
     }
     .back-nav:hover { text-decoration: underline; }
     
-    .dossier-header {
-      border-bottom: 1px solid #dcdad5;
-      padding-bottom: 24px;
+    .intro-section {
       margin-bottom: 40px;
     }
     .dossier-meta {
@@ -48,45 +46,125 @@
       font-family: "Playfair Display", serif;
       font-size: 2.5rem;
       font-weight: 600;
-      margin: 12px 0 6px 0;
+      margin: 12px 0 16px 0;
     }
-    .dossier-subtitle {
-      font-size: 1.1rem;
-      color: #555;
-      font-style: italic;
-    }
-    
-    .dossier-section { margin-bottom: 40px; }
-    .dossier-section h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 1.4rem;
-      color: #1a331e;
-      margin-bottom: 16px;
-      border-bottom: 1px dashed #dcdad5;
-      padding-bottom: 6px;
-    }
-    .dossier-section p {
+    .intro-text {
       font-size: 1.05rem;
       line-height: 1.7;
-      color: #2c2c2c;
-      margin-bottom: 16px;
+      color: #444;
+      max-width: 750px;
     }
     
-    .blueprint-list {
-      list-style: none;
-      padding: 0;
+    .filter-container {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+      margin-bottom: 32px;
     }
-    .blueprint-list li {
-      padding: 16px 0;
-      border-bottom: 1px solid #eae8e3;
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
-    .blueprint-tag {
+    .filter-label {
       font-family: "DM Mono", monospace;
       font-size: 0.75rem;
-      background: #eae8e3;
+      color: #767676;
+      text-transform: uppercase;
+    }
+    .filter-select {
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.95rem;
+      padding: 8px 36px 8px 12px;
+      border: 1px solid #dcdad5;
+      background-color: #fff;
+      color: #1a1a1a;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .divider-line {
+      border: none;
+      border-top: 1px solid #dcdad5;
+      margin-bottom: 40px;
+    }
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .project-card {
+      background: #fff;
+      border: 1px solid #eae8e3;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-preview {
+      width: 100%;
+      height: 200px;
+      background-color: #eae8e3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .project-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .project-tags {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .tag {
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
       padding: 2px 6px;
       border-radius: 3px;
-      margin-right: 8px;
+      background-color: #f0f0ed;
+      color: #555;
+    }
+    .card-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      margin: 0 0 10px 0;
+      color: #1a331e;
+    }
+    .card-description {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #555;
+      margin: 0 0 16px 0;
+      flex-grow: 1;
+    }
+    .card-meta-details {
+      font-family: "DM Mono", monospace;
+      font-size: 0.75rem;
+      color: #767676;
+      border-top: 1px dashed #eae8e3;
+      padding-top: 12px;
+      margin-top: auto;
+    }
+    
+    @media (max-width: 900px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .filter-container {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -95,52 +173,112 @@
   <div class="dossier-wrapper">
     <a href="/index.html" class="back-nav">&larr; Return to Live Archive Dashboard</a>
 
-    <header class="dossier-header">
-      <div class="dossier-meta">Extracurricular Portfolio // Core System Blueprint</div>
-      <h1 class="dossier-title">Project Green Horizon</h1>
-      <p class="dossier-subtitle">A digital workspace for long-term botanical documentation and independent field studies.</p>
+    <header class="intro-section">
+      <div class="dossier-meta">Portfolio Index // System Registry</div>
+      <h1 class="dossier-title">Project Registry</h1>
+      <p class="intro-text">
+        Welcome to the project management dashboard. Use this registry to isolate and filter specific extracurricular studies, research milestones, and structural database designs. Select your tracking parameters using the filters below to focus on specific botanical data frameworks.
+      </p>
     </header>
 
-    <main>
-      <section class="dossier-section">
-        <h3>01. Concept & Scope</h3>
-        <p>
-          This website functions entirely as an independent botanical observatory. Built as a multi-year extracurricular portfolio, it establishes a structured visual space to share authentic field observations, plant lifecycles, and localized ecology papers openly on the web.
-        </p>
-        <p>
-          By framing the interface as a patient field journal, the objective is to methodically track overlooked common vegetation—blurring the line between traditional raw academic data grids and artistic digital archiving.
-        </p>
-      </section>
+    <div class="filter-container">
+      <div class="filter-group">
+        <label class="filter-label" for="typeFilter">Project Type</label>
+        <select class="filter-select" id="typeFilter" onchange="filterProjects()">
+          <option value="all">All Types</option>
+          <option value="type1">Experiments</option>
+          <option value="type2">Field Projects</option>
+          <option value="type3">Research Projects</option>
+          <option value="type4">Scientific Writing</option>
+          <option value="type5">Independent Projects</option>
+        </select>
+      </div>
 
-      <section class="dossier-section">
-        <h3>02. Forthcoming Modules & Papers</h3>
-        <p>As this portfolio matures, this isolated workspace will scale to detail the formal research structures driving the main page dashboards:</p>
-        
-        <ul class="blueprint-list">
-          <li>
-            <span class="blueprint-tag">LOGS</span> 
-            <strong>Taxonomic Tracking Indices:</strong> Detailed structural cross-referencing between common terminology and formalized botanical classifications.
-          </li>
-          <li>
-            <span class="blueprint-tag">ESSAYS</span> 
-            <strong>Independent Field Papers:</strong> Short-form analytical monographs investigating local soil properties, urban plant growth anomalies, and seasonal micro-shifts.
-          </li>
-          <li>
-            <span class="blueprint-tag">MEDIA</span> 
-            <strong>The Micro-Gallery Framework:</strong> Replacing placeholders with systematic macro-photographic sequences tracking singular plant nodes across consecutive seasons.
-          </li>
-        </ul>
-      </section>
+      <div class="filter-group">
+        <label class="filter-label" for="statusFilter">Project Status</label>
+        <select class="filter-select" id="statusFilter" onchange="filterProjects()">
+          <option value="all">All Statuses</option>
+          <option value="status1">Planned</option>
+          <option value="status2">Ongoing</option>
+          <option value="status3">Completed</option>
+          <option value="status4">Archived</option>
+          <option value="status5">Failed</option>
+        </select>
+      </div>
+    </div>
 
-      <section class="dossier-section">
-        <h3>03. System Infrastructure</h3>
-        <p>
-          The layout relies on clean, intentional code parameters to maintain light client-side performance, ensuring data scannability remains the absolute core focus of the workspace.
-        </p>
-      </section>
-    </main>
+    <hr class="divider-line" />
 
-  </div>
+    <main class="projects-grid">
 
-</body>
-</html>
+      <article class="project-card" data-type="type1" data-status="status1">
+        <div class="project-preview">Preview Image Placement [Card 1]</div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">Experiments</span>
+            <span class="tag">Planned</span>
+          </div>
+          <h2 class="card-title">Botanical Specimen Record 01</h2>
+          <p class="card-description">This area holds descriptive field narrative details. Modify this entry block text inside your code parameters to map your research goals.</p>
+          <div class="card-meta-details">Observed: Aug 2026 // Code: PRJ-01</div>
+        </div>
+      </article>
+
+      <article class="project-card" data-type="type2" data-status="status2">
+        <div class="project-preview">Preview Image Placement [Card 2]</div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">Field Projects</span>
+            <span class="tag">Planned</span>
+          </div>
+          <h2 class="card-title">Botanical Specimen Record 02</h2>
+          <p class="card-description">This area holds descriptive field narrative details. Modify this entry block text inside your code parameters to map your research goals.</p>
+          <div class="card-meta-details">Observed: Aug 2026 // Code: PRJ-02</div>
+        </div>
+      </article>
+
+      <article class="project-card" data-type="type3" data-status="status3">
+        <div class="project-preview">Preview Image Placement [Card 3]</div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">Experiments</span>
+            <span class="tag">Planned</span>
+          </div>
+          <h2 class="card-title">Botanical Specimen Record 03</h2>
+          <p class="card-description">This area holds descriptive field narrative details. Modify this entry block text inside your code parameters to map your research goals.</p>
+          <div class="card-meta-details">Observed: Aug 2026 // Code: PRJ-03</div>
+        </div>
+      </article>
+
+      <article class="project-card" data-type="type4" data-status="status4">
+        <div class="project-preview">Preview Image Placement [Card 4]</div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">Field Projects</span>
+            <span class="tag">Failed</span>
+          </div>
+          <h2 class="card-title">Botanical Specimen Record 04</h2>
+          <p class="card-description">This area holds descriptive field narrative details. Modify this entry block text inside your code parameters to map your research goals.</p>
+          <div class="card-meta-details">Observed: Aug 2026 // Code: PRJ-04</div>
+        </div>
+      </article>
+
+      <article class="project-card" data-type="type5" data-status="status5">
+        <div class="project-preview">Preview Image Placement [Card 5]</div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">Experiments</span>
+            <span class="tag">Completed</span>
+          </div>
+          <h2 class="card-title">Botanical Specimen Record 05</h2>
+          <p class="card-description">This area holds descriptive field narrative details. Modify this entry block text inside your code parameters to map your research goals.</p>
+          <div class="card-meta-details">Observed: Aug 2026 // Code: PRJ-05</div>
+        </div>
+      </article>
+
+      <article class="project-card" data-type="type6" data-status="status6">
+        <div class="project-preview">Preview Image Placement [Card 6]</div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">Scientific Writing</span>
+            <span class="tag">Planned</span>
