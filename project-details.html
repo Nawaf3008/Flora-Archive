@@ -282,3 +282,4 @@
           <div class="project-tags">
             <span class="tag">Scientific Writing</span>
             <span class="tag">Planned</span>
+            Botanical Specimen Record 06This area holds descriptive field narrative details. Modify this entry block text inside your code parameters to map your research goals.Observed: Aug 2026 // Code: PRJ-06function filterProjects() {const typeValue = document.getElementById('typeFilter').value;const statusValue = document.getElementById('statusFilter').value;const cards = document.querySelectorAll('.project-card');cards.forEach(card => {const cardType = card.getAttribute('data-type');const cardStatus = card.getAttribute('data-status');const matchesType = (typeValue === 'all' || cardType === typeValue);const matchesStatus = (statusValue === 'all' || cardStatus === statusValue);if (matchesType && matchesStatus) {card.style.display = 'flex';} else {card.style.display = 'none';}});}
