@@ -90,3 +90,13 @@ body.dark{--ink:#dce7da;--deep:#091a15;--sage:#233d33;--sage2:#637b6b;--cream:#1
   grid-template-columns:1fr;
   gap:22px;
 }}
+.hero-image img,
+.feature-entry > img,
+.species-photo > img,
+.project-card > img,
+.gallery-grid > img,
+.lightbox img {
+  box-shadow:
+    0 0 0 2px #9aaa88,
+    0 0 0 6px rgba(154, 170, 136, 0.18);
+}
