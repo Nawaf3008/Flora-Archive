@@ -340,9 +340,13 @@
         const cardType = card.getAttribute('data-type');
         const cardStatus = card.getAttribute('data-status');
 
-        const matchesType = (typeValue === 'all' || cardType === typeValue);
-        const matchesStatus = (statusValue === 'all' || cardStatus === statusValue);
+       const matchesType =
+  typeValue === "all" ||
+  cardType.toLowerCase() === typeValue.toLowerCase();
 
+const matchesStatus =
+  statusValue === "all" ||
+  cardStatus.toLowerCase() === statusValue.toLowerCase();
         if (matchesType && matchesStatus) {
           card.style.display = 'flex';
         } else {
