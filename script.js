@@ -31,7 +31,22 @@ const experimentalPlants = [
   {
     scientificName: "Ficus benjamina",
     commonName: "Weeping fig",
-    keywords: ["ficus", "weeping fig", "variegata", "indoor", "physiology", "stress"],
+    keywords: [
+  "ficus",
+  "ficus benjamina",
+  "weeping fig",
+  "benjamin fig",
+  "benjamin tree",
+  "variegated ficus",
+  "variegated weeping fig",
+  "variegata",
+  "indoor",
+  "houseplant",
+  "physiology",
+  "stress",
+  "recovery",
+  "experiment"
+],
     information:
       "An indoor physiological experiment observing how a variegated Ficus benjamina responds to stress, recovery, and changing care conditions.",
     context: "Experimental plant · Indoor cultivation"
@@ -39,7 +54,21 @@ const experimentalPlants = [
   {
     scientificName: "Vitex trifolia",
     commonName: "Simpleleaf chastetree",
-    keywords: ["vitex", "chastetree", "simpleleaf", "cultivation", "resilience"],
+    keywords: [
+  "vitex",
+  "vitex trifolia",
+  "simpleleaf chastetree",
+  "simple leaf chastetree",
+  "chastetree",
+  "chaste tree",
+  "three-leaved chaste tree",
+  "lagundi",
+  "cultivated",
+  "garden plant",
+  "resilience",
+  "growth",
+  "experiment"
+],
     information:
       "An experimental plant being observed for its growth, resilience, and response to cultivation conditions over time.",
     context: "Experimental plant · Cultivated observation"
@@ -47,7 +76,7 @@ const experimentalPlants = [
   {
     scientificName: "Schefflera arboricola",
     commonName: "Dwarf umbrella tree",
-    keywords: ["schefflera", "umbrella tree", "dwarf umbrella", "indoor", "houseplant"],
+    keywords: ["schefflera", "umbrella tree", "dwarf umbrella", "indoor", "houseplant", "Umbrella tree", "Umbrella Tree", "Dwarf umbrella", "Houseplant", "Indoor"],
     information:
       "An indoor experimental plant being monitored for leaf growth, light response, and general condition.",
     context: "Experimental plant · Indoor cultivation"
