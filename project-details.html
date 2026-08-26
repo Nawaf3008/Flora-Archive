@@ -182,6 +182,128 @@
 .project-tags .tag {
   text-transform: uppercase;
 }
+    /* Flora Archive Project Registry theme */
+.dossier-body {
+  background: #f5f2ea;
+  color: #18372e;
+}
+
+.back-nav {
+  color: #6d4a12;
+  font-size: 0.78rem;
+  letter-spacing: 0.8px;
+}
+
+.back-nav:hover {
+  color: #18372e;
+}
+
+.dossier-title {
+  color: #102b24;
+  font-size: clamp(2.7rem, 6vw, 4.8rem);
+  font-weight: 500;
+  letter-spacing: -1.8px;
+}
+
+.intro-text {
+  color: #465c50;
+  max-width: 680px;
+}
+
+.dossier-meta,
+.filter-label {
+  color: #526d5c;
+  letter-spacing: 1.2px;
+}
+
+/* Sage filter panel */
+.filter-container {
+  background: #dbe4d6;
+  border: 1px solid #aab9a4;
+  padding: 20px 22px;
+  margin-top: 38px;
+  margin-bottom: 38px;
+}
+
+.filter-select {
+  border: 1px solid #8fa18c;
+  border-radius: 0;
+  background: #faf9f5;
+  color: #18372e;
+  padding: 11px 38px 11px 13px;
+}
+
+.filter-select:focus-visible {
+  outline: 3px solid #fff3bb;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px #18372e;
+}
+
+.divider-line {
+  border-top-color: #aab9a4;
+}
+
+/* Botanical project cards */
+.project-card {
+  background: #faf9f5;
+  border: 1px solid #aab9a4;
+  border-radius: 0;
+  box-shadow: 0 10px 24px rgba(24, 55, 46, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px rgba(24, 55, 46, 0.13);
+}
+
+.project-preview {
+  background: #dbe4d6;
+  color: #526d5c;
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.8px;
+}
+
+.project-preview img {
+  filter: saturate(0.72);
+  transition: filter 0.25s ease;
+}
+
+.project-card:hover .project-preview img {
+  filter: saturate(0.95);
+}
+
+.project-info {
+  padding: 24px;
+}
+
+.tag {
+  background: #18372e;
+  color: #f5f2ea;
+  border-radius: 0;
+  padding: 5px 7px;
+  font-size: 0.64rem;
+  letter-spacing: 0.65px;
+  text-transform: uppercase;
+}
+
+.card-title {
+  color: #102b24;
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.card-description {
+  color: #526d5c;
+  line-height: 1.65;
+}
+
+.card-meta-details {
+  color: #6d4a12;
+  border-top-color: #aab9a4;
+  letter-spacing: 0.65px;
+}
   </style>
 </head>
 <body class="dossier-body">
