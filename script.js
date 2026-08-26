@@ -31,13 +31,15 @@ const experimentalPlants = [
   {
     scientificName: "Ficus benjamina",
     commonName: "Weeping fig",
+    keywords: ["ficus", "weeping fig", "variegata", "indoor", "physiology", "stress"],
     information:
-      "An indoor physiological experiment observing how a variegated Ficus benjamina responds to periods of stress, recovery, and changing care conditions.",
+      "An indoor physiological experiment observing how a variegated Ficus benjamina responds to stress, recovery, and changing care conditions.",
     context: "Experimental plant · Indoor cultivation"
   },
   {
     scientificName: "Vitex trifolia",
     commonName: "Simpleleaf chastetree",
+    keywords: ["vitex", "chastetree", "simpleleaf", "cultivation", "resilience"],
     information:
       "An experimental plant being observed for its growth, resilience, and response to cultivation conditions over time.",
     context: "Experimental plant · Cultivated observation"
@@ -45,39 +47,49 @@ const experimentalPlants = [
   {
     scientificName: "Schefflera arboricola",
     commonName: "Dwarf umbrella tree",
+    keywords: ["schefflera", "umbrella tree", "dwarf umbrella", "indoor", "houseplant"],
     information:
       "An indoor experimental plant being monitored for leaf growth, light response, and general condition.",
     context: "Experimental plant · Indoor cultivation"
   }
 ];
 
-const speciesInput = document.getElementById("speciesInput");
-const speciesSearch = document.getElementById("speciesSearch");
-const speciesResults = document.getElementById("speciesResults");
+const homePlantSearch = document.getElementById("speciesInput");
+const homePlantSearchButton = document.getElementById("speciesSearch");
+const archivePlantSearch = document.getElementById("globalSearch");
+const archivePlantResults = document.getElementById("searchResults");
+const clearArchiveSearch = document.getElementById("clearArchiveSearch");
 
-function searchExperimentalPlants() {
-  const searchTerm = speciesInput.value.trim().toLowerCase();
+function showPlantResults() {
+  const searchTerm = archivePlantSearch.value.trim().toLowerCase();
+
+  clearArchiveSearch.disabled = searchTerm === "";
 
   if (searchTerm === "") {
-    speciesResults.innerHTML =
+    archivePlantResults.innerHTML =
       "<p>Search the experimental plant archive by common or scientific name.</p>";
     return;
   }
 
   const matches = experimentalPlants.filter((plant) => {
-    const searchableText =
-      `${plant.scientificName} ${plant.commonName}`.toLowerCase();
+    const searchableText = [
+      plant.scientificName,
+      plant.commonName,
+      ...plant.keywords
+    ]
+      .join(" ")
+      .toLowerCase();
 
     return searchableText.includes(searchTerm);
   });
 
   if (matches.length === 0) {
-    speciesResults.innerHTML =
+    archivePlantResults.innerHTML =
       "<p>No documented experimental plant matches that search yet.</p>";
     return;
   }
 
-  speciesResults.innerHTML = matches
+  archivePlantResults.innerHTML = matches
     .map(
       (plant) => `
         <article class="species-result">
@@ -91,10 +103,28 @@ function searchExperimentalPlants() {
     .join("");
 }
 
-speciesSearch.addEventListener("click", searchExperimentalPlants);
+function openArchiveSearchFromPlantBox() {
+  document.querySelector(".search-open").click();
+  archivePlantSearch.value = homePlantSearch.value;
+  showPlantResults();
 
-speciesInput.addEventListener("keydown", (event) => {
+  setTimeout(() => archivePlantSearch.focus(), 0);
+}
+
+homePlantSearchButton.addEventListener("click", openArchiveSearchFromPlantBox);
+
+homePlantSearch.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
-    searchExperimentalPlants();
+    openArchiveSearchFromPlantBox();
   }
 });
+
+archivePlantSearch.addEventListener("input", showPlantResults);
+
+clearArchiveSearch.addEventListener("click", () => {
+  archivePlantSearch.value = "";
+  showPlantResults();
+  archivePlantSearch.focus();
+});
+
+showPlantResults();
