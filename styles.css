@@ -147,3 +147,24 @@ body.dark{--ink:#dce7da;--deep:#091a15;--sage:#233d33;--sage2:#637b6b;--cream:#1
   opacity: 0.35;
   cursor: default;
 }
+
+/* Clear keyboard focus for links, buttons, form fields, and menu items */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #fff3bb;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px #18372e;
+}
+
+/* Darker ochre where gold appears on the light sage background */
+body:not(.dark) .intro h2 em,
+body:not(.dark) .notes h2 em,
+body:not(.dark) .notes-grid span,
+body:not(.dark) .library-status,
+body:not(.dark) .library-list span {
+  color: #6d4a12;
+}
