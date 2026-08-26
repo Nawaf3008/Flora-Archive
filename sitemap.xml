@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://sitemaps.org">
+  <url>
+    <loc>https://netlify.app</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://netlify.appproject-details</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://netlify.appficus-experiment</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
