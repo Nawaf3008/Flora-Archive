@@ -168,3 +168,14 @@ body:not(.dark) .library-status,
 body:not(.dark) .library-list span {
   color: #6d4a12;
 }
+
+/* Remove the decorative eyebrow lines and make eyebrow labels clearer */
+.eyebrow span {
+  display: none;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.35px;
+}
