@@ -100,3 +100,22 @@ body.dark{--ink:#dce7da;--deep:#091a15;--sage:#233d33;--sage2:#637b6b;--cream:#1
     0 0 0 2px #9aaa88,
     0 0 0 6px rgba(154, 170, 136, 0.18);
 }
+
+
+.button,
+.text-link,
+.list-entry > a {
+  min-width: 48px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+
+.list-entry > a {
+  width: 48px;
+  padding: 0;
+  border-radius: 50%;
+}
