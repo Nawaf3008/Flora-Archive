@@ -119,3 +119,31 @@ body.dark{--ink:#dce7da;--deep:#091a15;--sage:#233d33;--sage2:#637b6b;--cream:#1
   padding: 0;
   border-radius: 50%;
 }
+
+.archive-search-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.archive-search-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.clear-search {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border: 1px solid #8d9c7c;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.clear-search:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
