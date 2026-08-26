@@ -26,3 +26,75 @@ $('#newsletterForm').addEventListener('submit',e=>{e.preventDefault(); $('#formN
 $('#year').textContent=new Date().getFullYear();
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){const num=e.target;const target=+num.dataset.count;let n=0;const step=Math.max(1,Math.ceil(target/42));const run=()=>{n=Math.min(target,n+step);num.textContent=n.toLocaleString();if(n<target)requestAnimationFrame(run)};run();observer.unobserve(num)}}),{threshold:.45});$$('[data-count]').forEach(n=>observer.observe(n));
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){$$('.search-modal,.lightbox').forEach(x=>x.classList.remove('open'));}});
+
+const experimentalPlants = [
+  {
+    scientificName: "Ficus benjamina",
+    commonName: "Weeping fig",
+    information:
+      "An indoor physiological experiment observing how a variegated Ficus benjamina responds to periods of stress, recovery, and changing care conditions.",
+    context: "Experimental plant · Indoor cultivation"
+  },
+  {
+    scientificName: "Vitex trifolia",
+    commonName: "Simpleleaf chastetree",
+    information:
+      "An experimental plant being observed for its growth, resilience, and response to cultivation conditions over time.",
+    context: "Experimental plant · Cultivated observation"
+  },
+  {
+    scientificName: "Schefflera arboricola",
+    commonName: "Dwarf umbrella tree",
+    information:
+      "An indoor experimental plant being monitored for leaf growth, light response, and general condition.",
+    context: "Experimental plant · Indoor cultivation"
+  }
+];
+
+const speciesInput = document.getElementById("speciesInput");
+const speciesSearch = document.getElementById("speciesSearch");
+const speciesResults = document.getElementById("speciesResults");
+
+function searchExperimentalPlants() {
+  const searchTerm = speciesInput.value.trim().toLowerCase();
+
+  if (searchTerm === "") {
+    speciesResults.innerHTML =
+      "<p>Search the experimental plant archive by common or scientific name.</p>";
+    return;
+  }
+
+  const matches = experimentalPlants.filter((plant) => {
+    const searchableText =
+      `${plant.scientificName} ${plant.commonName}`.toLowerCase();
+
+    return searchableText.includes(searchTerm);
+  });
+
+  if (matches.length === 0) {
+    speciesResults.innerHTML =
+      "<p>No documented experimental plant matches that search yet.</p>";
+    return;
+  }
+
+  speciesResults.innerHTML = matches
+    .map(
+      (plant) => `
+        <article class="species-result">
+          <p class="meta">${plant.context}</p>
+          <h3><em>${plant.scientificName}</em></h3>
+          <p class="common-name">${plant.commonName}</p>
+          <p>${plant.information}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+speciesSearch.addEventListener("click", searchExperimentalPlants);
+
+speciesInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    searchExperimentalPlants();
+  }
+});
