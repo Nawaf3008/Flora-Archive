@@ -130,6 +130,78 @@
       font-weight: 500;
     }
     .doc-link-list a:hover { text-decoration: underline; }
+    /* Flora Archive paper details */
+.experiment-body {
+  background: #f5f2ea;
+  color: #18372e;
+}
+
+.hero-fade {
+  background: linear-gradient(to bottom, rgba(245, 242, 234, 0) 0%, #f5f2ea 100%);
+}
+
+.report-header {
+  border-bottom-color: #aab9a4;
+}
+
+.report-meta,
+.data-label {
+  color: #526d5c;
+}
+
+.report-section {
+  border-left: 1px solid #d1dccd;
+  padding-left: 22px;
+}
+
+.data-box {
+  background: #eef3ea;
+  border-color: #aab9a4;
+  border-radius: 0;
+}
+
+.citation {
+  color: #6d4a12;
+  font-family: "DM Mono", monospace;
+  font-size: 0.72em;
+  font-weight: 500;
+  text-decoration: none;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+.citation:hover,
+.citation:focus-visible {
+  text-decoration: underline;
+  outline: 2px solid #18372e;
+  outline-offset: 3px;
+}
+
+#reference-1 {
+  scroll-margin-top: 32px;
+}
+
+.doc-link-list li {
+  background: #eef3ea;
+  border: 1px solid #aab9a4;
+  border-left: 4px solid #6d4a12;
+  padding: 18px;
+  line-height: 1.65;
+}
+
+.reference-number {
+  color: #6d4a12;
+  font-family: "DM Mono", monospace;
+  margin-right: 6px;
+}
+
+.doc-link-list a {
+  color: #18372e;
+  display: inline-block;
+  margin-top: 9px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
   </style>
 </head>
 <body class="experiment-body">
@@ -168,7 +240,7 @@
       <section class="report-section">
         <h3>Background</h3>
         <p>
-          Research shows that variegated plant varieties are inherently more vulnerable to environmental stress than fully green varieties[1]. This makes my experiment with <em>Ficus benjamina 'variegata'</em> especially critical, as it tests a cultivar known for being uniquely less resilient than a typical weeping fig.
+          Research on English ivy (<em>Hedera helix</em>) found that the green leaf cultivars tested had higher photosynthetic capabilities and light adaptation ranges than the variegated cultivars tested<a class="citation" href="#reference-1" aria-label="Go to reference 1">[1]</a>. Even though this study does not directly test <em>Ficus benjamina</em>, it provides amountable context for interpreting a variegated cultivated variety under stress (only confirmed type of stress is light based stress, context further down the sections).
         </p>
       </section>
 
@@ -229,13 +301,20 @@
         <p>Other than the aforementioned information from the notes app for the light levels, there is no true documentation.</p>
       </section>
 
-      <section class="report-section">
-        <h3>Related Material</h3>
-        <p>Use the following resources for additional context:</p>
-        <ul class="doc-link-list">
-         <p>Zhang, Q., & Li, X. (2023). Physiological differences and sun-resistance of green-leaf and variegated-leaf cultivars of ivy (<em>Hedera helix</em> L.). <em>Acta Horticulturae Sinica</em>, <em>50</em>(5), 539–549. <a href="https://scribd.com" target="_blank" rel="noopener">https://scribd.com</a></p>
-        </ul>
-      </section>
+      <section class="report-section" id="related-material">
+  <h3>Related Material</h3>
+  <p>Use the following resource for additional context:</p>
+
+  <ol class="doc-link-list">
+    <li id="reference-1">
+      <span class="reference-number">[1]</span>
+      Zhang, T., &amp; Fu, Y. (2023). Physiological differences of green-leaf and variegated-leaf cultivars of ivy (<em>Hedera helix</em> L.). <em>Bangladesh Journal of Botany</em>, 52(2), 539–549.
+      <a href="https://www.banglajol.info/index.php/BJB/article/view/68219/45882" target="_blank" rel="noopener">
+        Read the paper ↗
+      </a>
+    </li>
+  </ol>
+</section>
     </main>
   </div>
 
