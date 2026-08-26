@@ -98,9 +98,7 @@
   <button id="speciesSearch" aria-label="Search species">→</button>
 </div>
 
-<div id="speciesResults" class="species-results" aria-live="polite">
-  <p>Search the experimental plant archive by common or scientific name.</p>
-</div>
+
 
     <p class="micro">
       Browse by <a href="#species">family</a> ·
@@ -185,7 +183,28 @@
     Instagram · @flora._.archive
   </a>
 </div><div class="footer-bottom">© <span id="year"></span> Flora Archive<br>Made for the long view.</div></footer>
-  <div class="search-modal" id="searchModal" aria-hidden="true"><button class="modal-close" aria-label="Close search">×</button><div><p class="eyebrow"><span></span> Search the archive</p><input id="globalSearch" placeholder="Try “desert”, “pollination”, or a species name" autofocus /><div id="searchResults"><p>Search across observations, species, research notes, projects, and resources.</p></div></div></div>
+  <div class="search-modal" id="searchModal" aria-hidden="true">
+  <button class="modal-close" aria-label="Close search">×</button>
+
+  <div>
+    <p class="eyebrow"><span></span> Search the archive</p>
+
+    <div class="archive-search-row">
+      <button id="clearArchiveSearch" class="clear-search" type="button" aria-label="Clear search">×</button>
+
+      <input
+        id="globalSearch"
+        placeholder="Search a plant, such as Ficus or garden cress"
+        aria-label="Search the experimental plant archive"
+        autofocus
+      />
+    </div>
+
+    <div id="searchResults" aria-live="polite">
+      <p>Search the experimental plant archive by common or scientific name.</p>
+    </div>
+  </div>
+</div>>
   <div class="lightbox" id="lightbox" aria-hidden="true"><button class="modal-close" aria-label="Close gallery">×</button><img src="" alt="" /></div>
   <script src="script.js"></script>
 </body>
