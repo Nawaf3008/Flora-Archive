@@ -7,7 +7,22 @@ $('.theme-toggle').addEventListener('click', () => {
 });
 if(localStorage.getItem('flora-theme') === 'dark') document.body.classList.add('dark');
 
-$('.nav-more').addEventListener('click', e => { $('.more-menu').classList.toggle('open'); e.currentTarget.setAttribute('aria-expanded', $('.more-menu').classList.contains('open')); });
+const exploreButton = $('.nav-more');
+const exploreMenu = $('.more-menu');
+
+exploreButton.addEventListener('click', e => {
+  e.stopPropagation();
+
+  const isOpen = exploreMenu.classList.toggle('open');
+  exploreButton.setAttribute('aria-expanded', isOpen);
+});
+
+document.addEventListener('click', e => {
+  if (!exploreMenu.contains(e.target) && !exploreButton.contains(e.target)) {
+    exploreMenu.classList.remove('open');
+    exploreButton.setAttribute('aria-expanded', 'false');
+  }
+});
 $('.menu-btn').addEventListener('click', () => $('.nav-links').classList.toggle('mobile'));
 
 const modal = $('#searchModal');
