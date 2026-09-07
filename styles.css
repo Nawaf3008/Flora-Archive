@@ -87,6 +87,22 @@ body.dark{--ink:#dce7da;--deep:#091a15;--sage:#233d33;--sage2:#637b6b;--cream:#1
   gap:5vw;
 }
 
+.research-library{
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  align-items:center;
+  gap:5vw;
+}
+
+.menu-label{
+  font:9px var(--mono);
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+  color:var(--muted);
+  padding:7px 13px 9px;
+  margin:0;
+}
+
 .library-copy h2{
   font-size:clamp(38px,4.5vw,62px);
 }
