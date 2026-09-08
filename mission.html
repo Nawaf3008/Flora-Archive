@@ -250,17 +250,6 @@
       line-height: 1.45;
     }
 
-    .mission-footer {
-      padding: 40px 8vw 70px;
-      border-top: 1px solid rgba(40, 67, 52, 0.18);
-      text-align: center;
-    }
-
-    .mission-back {
-      display: inline-flex;
-      gap: 10px;
-      align-items: center;
-    }
 
     /* Mobile */
 
@@ -301,38 +290,53 @@
         gap: 15px;
       }
     }
+    .mission-header {
+  justify-content: space-between;
+}
+
+.mission-home-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border: 1px solid var(--line);
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.mission-home-button:hover {
+  background: var(--deep);
+  color: var(--paper);
+  transform: translateY(-2px);
+}
+
+.mission-theme-toggle {
+  border: 0;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 23px;
+  width: 30px;
+  padding: 0;
+}
   </style>
 </head>
 
 <body>
 
-  <!-- =======================================================
-       HEADER
-       ======================================================= -->
 
-  <header class="site-header">
-    <a href="index.html" class="wordmark">
-      Flora Archive
-    </a>
+  <header class="site-header mission-header">
+  <a href="index.html" class="mission-home-button">
+    ← Back to home
+  </a>
 
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="mission.html">Mission</a>
-      <a href="library.html">Field Journal</a>
-      <a href="index.html#species">Species Archive</a>
-      <a href="project-details.html">Projects</a>
-    </nav>
-
-    <div class="header-actions">
-      <button class="theme-toggle" type="button" aria-label="Toggle theme">
-        ◐
-      </button>
-
-      <button class="menu-toggle" type="button" aria-label="Toggle menu">
-        ☰
-      </button>
-    </div>
-  </header>
+  <button class="theme-toggle mission-theme-toggle" type="button" aria-label="Toggle theme">
+    ◐
+  </button>
+</header>
 
 
   <!-- =======================================================
@@ -711,28 +715,12 @@
   </main>
 
 
-  <!-- =======================================================
-       FOOTER
-       ======================================================= -->
+ 
 
-  <footer class="mission-footer">
-
-    <a class="text-link mission-back" href="index.html#projects">
-      Back to projects <span>↗</span>
-    </a>
-
-  </footer>
-
-
-  <!-- =======================================================
-       THEME / MENU
-       ======================================================= -->
-
+ 
   <script>
     const themeToggle = document.querySelector(".theme-toggle");
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
+    
     if (localStorage.getItem("flora-theme") === "dark") {
       document.body.classList.add("dark");
     }
@@ -746,9 +734,7 @@
       );
     });
 
-    menuToggle?.addEventListener("click", () => {
-      navLinks?.classList.toggle("mobile");
-    });
+
   </script>
 
 </body>
