@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="The mission behind Flora Archive — an independent botanical archive built around observation, experimentation, documentation, and curiosity.">
+
+  <title>The Mission · Flora Archive</title>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* =========================================================
+       FLORA ARCHIVE — MISSION PAGE
+       ========================================================= */
+
+    .mission-hero {
+      padding: 150px 8vw 100px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .mission-hero .eyebrow {
+      margin-bottom: 28px;
+    }
+
+    .mission-title {
+      max-width: 950px;
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(3.5rem, 8vw, 8rem);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .mission-title em {
+      font-weight: 400;
+    }
+
+    .mission-intro {
+      max-width: 680px;
+      margin-top: 45px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .mission-section {
+      padding: 100px 8vw;
+      border-top: 1px solid rgba(40, 67, 52, 0.18);
+    }
+
+    .mission-section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .mission-heading {
+      display: grid;
+      grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.35fr);
+      gap: 70px;
+      align-items: start;
+    }
+
+    .mission-label {
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.65;
+    }
+
+    .mission-heading h2 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.4rem, 5vw, 4.8rem);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    .mission-heading h2 em {
+      font-style: italic;
+    }
+
+    .mission-copy {
+      max-width: 760px;
+      margin-left: auto;
+      margin-top: 45px;
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+
+    .mission-copy p {
+      margin-bottom: 24px;
+    }
+
+    /* Toolkit */
+
+    .toolkit-list {
+      margin-top: 70px;
+      border-top: 1px solid rgba(40, 67, 52, 0.18);
+    }
+
+    .toolkit-item {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 30px;
+      padding: 30px 0;
+      border-bottom: 1px solid rgba(40, 67, 52, 0.18);
+    }
+
+    .toolkit-number {
+      font-family: "DM Mono", monospace;
+      font-size: 0.75rem;
+      opacity: 0.55;
+    }
+
+    .toolkit-item h3 {
+      margin: 0 0 8px;
+      font-family: "Playfair Display", serif;
+      font-size: 1.7rem;
+      font-weight: 400;
+    }
+
+    .toolkit-item p {
+      max-width: 700px;
+      margin: 0;
+      line-height: 1.7;
+      opacity: 0.8;
+    }
+
+    /* Side missions */
+
+    .side-missions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 70px;
+    }
+
+    .mission-card {
+      padding: 35px;
+      min-height: 260px;
+      border: 1px solid rgba(40, 67, 52, 0.2);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .mission-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(40, 67, 52, 0.45);
+    }
+
+    .mission-card span {
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.55;
+    }
+
+    .mission-card h3 {
+      margin: 55px 0 15px;
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    .mission-card p {
+      margin: 0;
+      line-height: 1.7;
+      opacity: 0.8;
+    }
+
+    /* Mini descriptions */
+
+    .mini-list {
+      margin-top: 70px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px 70px;
+    }
+
+    .mini-item {
+      border-top: 1px solid rgba(40, 67, 52, 0.18);
+      padding-top: 22px;
+    }
+
+    .mini-label {
+      display: block;
+      margin-bottom: 12px;
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.55;
+    }
+
+    .mini-item h3 {
+      margin: 0 0 12px;
+      font-family: "Playfair Display", serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+
+    .mini-item p {
+      margin: 0;
+      line-height: 1.7;
+      opacity: 0.8;
+    }
+
+    /* Future outlook */
+
+    .outlook {
+      padding-bottom: 150px;
+    }
+
+    .outlook-box {
+      margin-top: 70px;
+      padding: 60px;
+      background: rgba(40, 67, 52, 0.06);
+      border-left: 3px solid currentColor;
+    }
+
+    .outlook-box p {
+      max-width: 850px;
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      line-height: 1.3;
+    }
+
+    .mission-closing {
+      max-width: 800px;
+      margin: 60px auto 0;
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .mission-footer {
+      padding: 40px 8vw 70px;
+      border-top: 1px solid rgba(40, 67, 52, 0.18);
+      text-align: center;
+    }
+
+    .mission-back {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 800px) {
+
+      .mission-hero {
+        padding: 110px 7vw 80px;
+      }
+
+      .mission-section {
+        padding: 75px 7vw;
+      }
+
+      .mission-heading {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .mission-copy {
+        margin-left: 0;
+      }
+
+      .side-missions {
+        grid-template-columns: 1fr;
+      }
+
+      .mini-list {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .outlook-box {
+        padding: 35px 25px;
+      }
+
+      .toolkit-item {
+        grid-template-columns: 45px 1fr;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       HEADER
+       ======================================================= -->
+
+  <header class="site-header">
+    <a href="index.html" class="wordmark">
+      Flora Archive
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="mission.html">Mission</a>
+      <a href="library.html">Field Journal</a>
+      <a href="index.html#species">Species Archive</a>
+      <a href="project-details.html">Projects</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Toggle theme">
+        ◐
+      </button>
+
+      <button class="menu-toggle" type="button" aria-label="Toggle menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+
+  <!-- =======================================================
+       HERO
+       ======================================================= -->
+
+  <main>
+
+    <section class="mission-hero">
+
+      <p class="eyebrow">
+        <span></span>
+        The reason this archive exists
+      </p>
+
+      <h1 class="mission-title">
+        A mission built around
+        <em>looking closely.</em>
+      </h1>
+
+      <p class="mission-intro">
+        Flora Archive is an independent, long-term botanical record:
+        part field journal, part experiment log, part species archive,
+        and part an excuse to keep asking questions.
+      </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         01 — ABOUT ME
+         ===================================================== -->
+
+    <section class="mission-section">
+
+      <div class="mission-section-inner">
+
+        <div class="mission-heading">
+
+          <span class="mission-label">
+            01 / About me
+          </span>
+
+          <h2>
+            The person behind
+            <em>the archive.</em>
+          </h2>
+
+        </div>
+
+        <div class="mission-copy">
+
+          <p>
+            I am an independent student with a fascination for plants,
+            their growth, their responses to their surroundings, and
+            the strange amount of information hidden inside something
+            most people walk past without noticing.
+          </p>
+
+          <p>
+            Flora Archive gives that fascination somewhere to go.
+            It is a place for observations, failed attempts,
+            photographs, experiments, questions, notes, and the
+            accumulation of knowledge that happens when you keep
+            returning to the same living subjects over time.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         02 — THE MOTHER MISSION
+         ===================================================== -->
+
+    <section class="mission-section">
+
+      <div class="mission-section-inner">
+
+        <div class="mission-heading">
+
+          <span class="mission-label">
+            02 / The why
+          </span>
+
+          <h2>
+            The Mother Mission
+          </h2>
+
+        </div>
+
+        <div class="mission-copy">
+
+          <p>
+            The central mission is simple:
+            <strong>pay attention.</strong>
+          </p>
+
+          <p>
+            Plants are often treated as background scenery — something
+            decorative, static, and easily overlooked. Flora Archive
+            exists to do the opposite. It is an attempt to observe
+            botanical life as something dynamic, responsive, and worth
+            documenting in its own right.
+          </p>
+
+          <p>
+            The archive is not built around the idea of perfect
+            experiments or flawless documentation. Continuity matters
+            more than perfection. Repeated observations, unexpected
+            results, failed experiments, uncertainty, and small changes
+            all become part of the record.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         03 — TOOLKIT
+         ===================================================== -->
+
+    <section class="mission-section">
+
+      <div class="mission-section-inner">
+
+        <div class="mission-heading">
+
+          <span class="mission-label">
+            03 / The what
+          </span>
+
+          <h2>
+            Current Toolkit &
+            <em>Areas of Focus</em>
+          </h2>
+
+        </div>
+
+        <div class="toolkit-list">
+
+          <div class="toolkit-item">
+            <span class="toolkit-number">01</span>
+            <div>
+              <h3>Field Observation</h3>
+              <p>
+                Watching plants in their actual environments and
+                recording the details that are easy to miss.
+              </p>
+            </div>
+          </div>
+
+          <div class="toolkit-item">
+            <span class="toolkit-number">02</span>
+            <div>
+              <h3>Botanical Documentation</h3>
+              <p>
+                Photographs, measurements, descriptions, species
+                records, and long-term observations.
+              </p>
+            </div>
+          </div>
+
+          <div class="toolkit-item">
+            <span class="toolkit-number">03</span>
+            <div>
+              <h3>Plant Experiments</h3>
+              <p>
+                Small controlled experiments designed to turn curiosity
+                into observations that can actually be compared.
+              </p>
+            </div>
+          </div>
+
+          <div class="toolkit-item">
+            <span class="toolkit-number">04</span>
+            <div>
+              <h3>Ecology & Environment</h3>
+              <p>
+                Looking at plants as part of larger systems rather than
+                isolated organisms.
+              </p>
+            </div>
+          </div>
+
+          <div class="toolkit-item">
+            <span class="toolkit-number">05</span>
+            <div>
+              <h3>Research & Reading</h3>
+              <p>
+                Using scientific literature and other reliable sources
+                to give observations a stronger foundation.
+              </p>
+            </div>
+          </div>
+
+          <div class="toolkit-item">
+            <span class="toolkit-number">06</span>
+            <div>
+              <h3>Digital Archiving</h3>
+              <p>
+                Turning scattered observations into an organized,
+                searchable record that can continue growing.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         04 — SIDE MISSIONS + MINI DESCRIPTIONS
+         ===================================================== -->
+
+    <section class="mission-section">
+
+      <div class="mission-section-inner">
+
+        <div class="mission-heading">
+
+          <span class="mission-label">
+            04 / The how
+          </span>
+
+          <h2>
+            Side Missions
+          </h2>
+
+        </div>
+
+        <div class="side-missions">
+
+          <article class="mission-card">
+            <span>Side mission 01</span>
+            <h3>Observe the ordinary.</h3>
+            <p>
+              Look at the plants that are usually ignored and find
+              something worth recording.
+            </p>
+          </article>
+
+          <article class="mission-card">
+            <span>Side mission 02</span>
+            <h3>Document the failed.</h3>
+            <p>
+              Failed experiments are still data. Unexpected results
+              are often where the interesting questions begin.
+            </p>
+          </article>
+
+          <article class="mission-card">
+            <span>Side mission 03</span>
+            <h3>Follow the question.</h3>
+            <p>
+              Let observations create new questions instead of forcing
+              every observation into a predetermined conclusion.
+            </p>
+          </article>
+
+        </div>
+
+
+        <div class="mini-list">
+
+          <div class="mini-item">
+            <span class="mini-label">Mini-description</span>
+            <h3>Species Archive</h3>
+            <p>
+              A growing record of the plants encountered, observed,
+              photographed, and researched.
+            </p>
+          </div>
+
+          <div class="mini-item">
+            <span class="mini-label">Mini-description</span>
+            <h3>Field Journal</h3>
+            <p>
+              The informal side of the archive: observations,
+              thoughts, discoveries, and things noticed in passing.
+            </p>
+          </div>
+
+          <div class="mini-item">
+            <span class="mini-label">Mini-description</span>
+            <h3>Research Library</h3>
+            <p>
+              A collection of useful scientific resources and
+              references that help turn curiosity into understanding.
+            </p>
+          </div>
+
+          <div class="mini-item">
+            <span class="mini-label">Mini-description</span>
+            <h3>Experimental Bench</h3>
+            <p>
+              Controlled plant experiments where questions become
+              variables, measurements, observations, and results.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         05 — FUTURE OUTLOOK
+         ===================================================== -->
+
+    <section class="mission-section outlook">
+
+      <div class="mission-section-inner">
+
+        <div class="mission-heading">
+
+          <span class="mission-label">
+            05 / Where I'm going
+          </span>
+
+          <h2>
+            Future Outlook /
+            <em>The Goal</em>
+          </h2>
+
+        </div>
+
+        <div class="mission-copy">
+
+          <p>
+            The long-term goal is to turn Flora Archive into a deeper,
+            more continuous record of botanical life and the questions
+            that emerge from observing it.
+          </p>
+
+          <p>
+            That means expanding the species archive, continuing
+            experiments, collecting better observations, documenting
+            photographs, building a stronger research library, and
+            gradually connecting individual observations to larger
+            ecological patterns.
+          </p>
+
+        </div>
+
+        <div class="outlook-box">
+
+          <p>
+            The archive does not need to become perfect.
+            It needs to keep becoming more useful.
+          </p>
+
+        </div>
+
+        <p class="mission-closing">
+          “The point is not to finish the archive.
+          The point is to keep looking closely enough
+          that there is always something worth adding.”
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer class="mission-footer">
+
+    <a class="text-link mission-back" href="index.html#projects">
+      Back to projects <span>↗</span>
+    </a>
+
+  </footer>
+
+
+  <!-- =======================================================
+       THEME / MENU
+       ======================================================= -->
+
+  <script>
+    const themeToggle = document.querySelector(".theme-toggle");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (localStorage.getItem("flora-theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+
+    themeToggle?.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+
+      localStorage.setItem(
+        "flora-theme",
+        document.body.classList.contains("dark") ? "dark" : "light"
+      );
+    });
+
+    menuToggle?.addEventListener("click", () => {
+      navLinks?.classList.toggle("mobile");
+    });
+  </script>
+
+</body>
+</html>
