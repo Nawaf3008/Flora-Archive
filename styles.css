@@ -269,3 +269,135 @@ body:not(.dark) .library-list span {
   font-weight: 600;
   letter-spacing: 1.35px;
 }
+
+body.dark {
+  --ink: #e4eee4;
+  --deep: #091a15;
+  --sage: #1d352c;
+  --sage2: #718a78;
+  --cream: #1a2b24;
+  --paper: #0f211a;
+  --gold: #e6c56f;
+  --line: rgba(228, 238, 228, 0.16);
+  --muted: #a9baae;
+}
+
+/* Header */
+
+body.dark .site-header {
+  background: rgba(15, 33, 26, 0.94);
+}
+
+/* Main headings */
+
+body.dark .hero h1,
+body.dark h2 {
+  color: var(--ink);
+}
+
+body.dark h1 em,
+body.dark h2 em {
+  color: var(--gold);
+}
+
+/* General text */
+
+body.dark .hero-text,
+body.dark .intro p,
+body.dark .project-card p:last-child,
+body.dark .list-entry > p:not(.meta),
+body.dark .entry-content > p:not(.meta) {
+  color: var(--muted);
+}
+
+/* Mission / green sections */
+
+body.dark .intro {
+  background: var(--sage);
+}
+
+body.dark .projects {
+  background: #182b23;
+}
+
+body.dark .notes {
+  background: var(--sage);
+}
+
+body.dark .notes-top > p:last-child {
+  color: #b7c8ba;
+}
+
+body.dark .notes-grid .meta {
+  color: #a8bea9;
+}
+
+/* Links and gold accents */
+
+body.dark .text-link span,
+body.dark .list-entry a,
+body.dark .species-search button,
+body.dark .notes-grid span {
+  color: var(--gold);
+}
+
+body.dark .eyebrow span {
+  background: var(--gold);
+}
+
+/* Cards */
+
+body.dark .card {
+  background: #162a22;
+}
+
+/* Species section */
+
+body.dark .species {
+  background: var(--deep);
+}
+
+body.dark .species-copy h2 {
+  color: #f1f3eb;
+}
+
+/* Newsletter / footer */
+
+body.dark .newsletter {
+  background: #071510;
+}
+
+body.dark footer {
+  background: #06130f;
+}
+
+/* Inputs */
+
+body.dark .species-search input,
+body.dark .newsletter input {
+  color: #f0f4ef;
+}
+
+body.dark .species-search input::placeholder,
+body.dark .newsletter input::placeholder {
+  color: #9eb2a4;
+}
+
+/* Mission page */
+
+body.dark .mission-section {
+  border-color: var(--line);
+}
+
+body.dark .mission-card {
+  border-color: var(--line);
+}
+
+body.dark .mission-card:hover {
+  border-color: rgba(230, 197, 111, 0.5);
+}
+
+body.dark .mission-home-button:hover {
+  background: var(--gold);
+  color: #091a15;
+}
