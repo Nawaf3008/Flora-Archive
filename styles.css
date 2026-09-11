@@ -401,3 +401,33 @@ body.dark .mission-home-button:hover {
   background: var(--gold);
   color: #091a15;
 }
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #9a6878 var(--paper);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9a6878;
+  border: 2px solid var(--paper);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+body.dark {
+  scrollbar-color: #b27b91 var(--paper);
+}
+
+body.dark::-webkit-scrollbar-thumb {
+  background: #b27b91;
+}
