@@ -183,23 +183,23 @@ const focusHistoryResult = document.querySelector('.focus-history-result');
 
 const focusHistory = {
   week: {
-    label: 'ONE WEEK AGO',
-    text: 'Plant responses to environmental stress — continuing observations and refining the experimental setup.'
+    label: 'ONE WEEK AGO TO NOW',
+    text: 'Research packets on suicide education.'
   },
 
   fortnight: {
     label: 'ONE FORTNIGHT AGO',
-    text: 'Independent plant physiology experiments — preparing the variables, measurements, and observation system.'
+    text: 'College research and heavy Flora Archive refinement.'
   },
 
   month: {
     label: 'ONE MONTH AGO',
-    text: 'Botanical documentation and species observation — building the archive and improving field-recording methods.'
+    text: 'Expanding Inaturalist observations by nearly 100%.'
   },
 
   'three-months': {
     label: 'THREE MONTHS AGO',
-    text: 'Botany, plant identification, and ecological observation — expanding the scientific foundation of the archive.'
+    text: 'Finishing the structure of Flora Archive.'
   }
 };
 
