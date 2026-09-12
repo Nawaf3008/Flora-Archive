@@ -172,3 +172,94 @@ clearArchiveSearch.addEventListener("click", () => {
 });
 
 showPlantResults();
+
+/* =========================
+   CURRENT FOCUS HISTORY
+   ========================= */
+
+const focusHistoryButton = document.querySelector('.focus-history-button');
+const focusHistoryMenu = document.querySelector('.focus-history-menu');
+const focusHistoryResult = document.querySelector('.focus-history-result');
+
+const focusHistory = {
+  week: {
+    label: 'ONE WEEK AGO',
+    text: 'Plant responses to environmental stress — continuing observations and refining the experimental setup.'
+  },
+
+  fortnight: {
+    label: 'ONE FORTNIGHT AGO',
+    text: 'Independent plant physiology experiments — preparing the variables, measurements, and observation system.'
+  },
+
+  month: {
+    label: 'ONE MONTH AGO',
+    text: 'Botanical documentation and species observation — building the archive and improving field-recording methods.'
+  },
+
+  'three-months': {
+    label: 'THREE MONTHS AGO',
+    text: 'Botany, plant identification, and ecological observation — expanding the scientific foundation of the archive.'
+  }
+};
+
+if (focusHistoryButton && focusHistoryMenu && focusHistoryResult) {
+
+  focusHistoryButton.addEventListener('click', function(event){
+    event.stopPropagation();
+
+    const isOpen =
+      focusHistoryButton.getAttribute('aria-expanded') === 'true';
+
+    focusHistoryButton.setAttribute(
+      'aria-expanded',
+      String(!isOpen)
+    );
+
+    focusHistoryMenu.classList.toggle('open', !isOpen);
+
+    focusHistoryMenu.setAttribute(
+      'aria-hidden',
+      String(isOpen)
+    );
+  });
+
+
+  focusHistoryMenu.addEventListener('click', function(event){
+
+    const selected = event.target.closest('[data-focus-period]');
+
+    if (!selected) return;
+
+    const period = selected.dataset.focusPeriod;
+    const focus = focusHistory[period];
+
+    if (!focus) return;
+
+    focusHistoryResult.innerHTML = `
+      <span class="meta">${focus.label}</span>
+      <p>${focus.text}</p>
+    `;
+
+    focusHistoryResult.classList.add('visible');
+
+    focusHistoryButton.setAttribute('aria-expanded', 'false');
+    focusHistoryMenu.classList.remove('open');
+    focusHistoryMenu.setAttribute('aria-hidden', 'true');
+
+  });
+
+
+  document.addEventListener('click', function(event){
+
+    if (!event.target.closest('.focus-history')) {
+
+      focusHistoryButton.setAttribute('aria-expanded', 'false');
+      focusHistoryMenu.classList.remove('open');
+      focusHistoryMenu.setAttribute('aria-hidden', 'true');
+
+    }
+
+  });
+
+}
