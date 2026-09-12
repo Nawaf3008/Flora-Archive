@@ -438,3 +438,48 @@ body.dark {
 body.dark::-webkit-scrollbar-thumb {
   background: #b27b91;
 }
+/* =========================================================
+   FLORA ARCHIVE — CUSTOM SCROLLBAR
+   ========================================================= */
+
+html {
+  scrollbar-width: auto;
+  scrollbar-color: #9a6878 var(--paper);
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9a6878;
+  border: 3px solid var(--paper);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* Dark mode */
+body.dark {
+  scrollbar-color: #b27b91 var(--paper);
+}
+
+body.dark::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+
+body.dark::-webkit-scrollbar-thumb {
+  background: #b27b91;
+  border-color: var(--paper);
+}
+
+body.dark::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
