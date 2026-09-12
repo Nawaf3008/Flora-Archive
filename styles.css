@@ -278,7 +278,6 @@ body.dark{--ink:#dce7da;--deep:#091a15;--sage:#233d33;--sage2:#637b6b;--cream:#1
   cursor: default;
 }
 
-/* Clear keyboard focus for links, buttons, form fields, and menu items */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -290,7 +289,7 @@ textarea:focus-visible,
   box-shadow: 0 0 0 6px #18372e;
 }
 
-/* Darker ochre where gold appears on the light sage background */
+
 body:not(.dark) .intro h2 em,
 body:not(.dark) .notes h2 em,
 body:not(.dark) .notes-grid span,
@@ -299,7 +298,7 @@ body:not(.dark) .library-list span {
   color: #6d4a12;
 }
 
-/* Remove the decorative eyebrow lines and make eyebrow labels clearer */
+
 .eyebrow span {
   display: none;
 }
@@ -322,13 +321,13 @@ body.dark {
   --muted: #a9baae;
 }
 
-/* Header */
+
 
 body.dark .site-header {
   background: rgba(15, 33, 26, 0.94);
 }
 
-/* Main headings */
+
 
 body.dark .hero h1,
 body.dark h2 {
@@ -340,7 +339,7 @@ body.dark h2 em {
   color: var(--gold);
 }
 
-/* General text */
+
 
 body.dark .hero-text,
 body.dark .intro p,
@@ -350,7 +349,7 @@ body.dark .entry-content > p:not(.meta) {
   color: var(--muted);
 }
 
-/* Mission / green sections */
+
 
 body.dark .intro {
   background: var(--sage);
@@ -372,7 +371,7 @@ body.dark .notes-grid .meta {
   color: #a8bea9;
 }
 
-/* Links and gold accents */
+
 
 body.dark .text-link span,
 body.dark .list-entry a,
@@ -385,13 +384,12 @@ body.dark .eyebrow span {
   background: var(--gold);
 }
 
-/* Cards */
+
 
 body.dark .card {
   background: #162a22;
 }
 
-/* Species section */
 
 body.dark .species {
   background: var(--deep);
@@ -401,7 +399,6 @@ body.dark .species-copy h2 {
   color: #f1f3eb;
 }
 
-/* Newsletter / footer */
 
 body.dark .newsletter {
   background: #071510;
@@ -411,7 +408,7 @@ body.dark footer {
   background: #06130f;
 }
 
-/* Inputs */
+
 
 body.dark .species-search input,
 body.dark .newsletter input {
@@ -423,7 +420,7 @@ body.dark .newsletter input::placeholder {
   color: #9eb2a4;
 }
 
-/* Mission page */
+
 
 body.dark .mission-section {
   border-color: var(--line);
@@ -471,9 +468,7 @@ body.dark {
 body.dark::-webkit-scrollbar-thumb {
   background: #b27b91;
 }
-/* =========================================================
-   FLORA ARCHIVE — CUSTOM SCROLLBAR
-   ========================================================= */
+
 
 html {
   scrollbar-width: auto;
@@ -499,7 +494,7 @@ html {
   background: var(--gold);
 }
 
-/* Dark mode */
+
 body.dark {
   scrollbar-color: #b27b91 var(--paper);
 }
@@ -515,4 +510,223 @@ body.dark::-webkit-scrollbar-thumb {
 
 body.dark::-webkit-scrollbar-thumb:hover {
   background: var(--gold);
+}
+
+
+.current-focus{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8vw;
+  align-items:end;
+  padding:100px 8vw;
+  background:var(--deep);
+  color:#f4f2ea;
+}
+
+.current-focus .eyebrow{
+  color:#b6c5b8;
+  margin-bottom:24px;
+}
+
+.current-focus .focus-heading h2{
+  margin:0;
+  color:#f4f2ea;
+  font:500 clamp(40px,4.5vw,63px)/1.03 var(--serif);
+  letter-spacing:-2.5px;
+}
+
+.current-focus .focus-heading h2 em{
+  color:#c5d1c4;
+}
+
+.focus-content{
+  border-top:1px solid rgba(212,221,208,.2);
+  padding-top:24px;
+}
+
+.focus-content .meta{
+  color:#91a397;
+  margin-bottom:14px;
+}
+
+.focus-content h3{
+  max-width:600px;
+  margin:0 0 18px;
+  color:#f4f2ea;
+  font:500 clamp(27px,3vw,42px)/1.12 var(--serif);
+  letter-spacing:-1px;
+}
+
+.focus-description{
+  max-width:540px;
+  margin:0 0 36px;
+  color:#b6c5b8;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.focus-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:30px;
+  padding-top:20px;
+  border-top:1px solid rgba(212,221,208,.15);
+}
+
+.focus-date{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.focus-date .meta{
+  margin:0;
+}
+
+.focus-date strong{
+  color:#d4ddd0;
+  font:500 11px var(--mono);
+  letter-spacing:.5px;
+}
+
+
+.focus-history{
+  position:relative;
+}
+
+.focus-history-button{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:0;
+  border:0;
+  background:none;
+  color:#d4ddd0;
+  cursor:pointer;
+  font:500 11px var(--mono);
+  letter-spacing:.4px;
+  text-transform:uppercase;
+}
+
+.focus-history-button span{
+  color:var(--gold);
+  font-size:15px;
+  transition:transform .25s ease;
+}
+
+.focus-history-button:hover{
+  color:var(--gold);
+}
+
+.focus-history-button:hover span{
+  transform:translateY(3px);
+}
+
+.focus-history-button[aria-expanded="true"] span{
+  transform:rotate(180deg);
+}
+
+
+.focus-history-menu{
+  position:absolute;
+  right:0;
+  bottom:calc(100% + 14px);
+  width:220px;
+  padding:8px;
+  background:#102b24;
+  border:1px solid rgba(212,221,208,.16);
+  box-shadow:0 14px 35px rgba(0,0,0,.2);
+
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(8px);
+
+  transition:
+    opacity .2s ease,
+    visibility .2s ease,
+    transform .2s ease;
+
+  z-index:20;
+}
+
+.focus-history-menu.open{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+
+.focus-history-menu button{
+  width:100%;
+  display:block;
+  padding:12px 13px;
+  border:0;
+  background:none;
+  color:#c2cec2;
+  text-align:left;
+  cursor:pointer;
+  font:11px var(--mono);
+}
+
+.focus-history-menu button:hover{
+  background:rgba(212,221,208,.08);
+  color:var(--gold);
+}
+
+
+
+.focus-history-result{
+  display:none;
+  margin-top:28px;
+  padding-top:20px;
+  border-top:1px solid rgba(212,221,208,.15);
+}
+
+.focus-history-result.visible{
+  display:block;
+}
+
+.focus-history-result .meta{
+  margin-bottom:8px;
+}
+
+.focus-history-result p{
+  margin:0;
+  color:#d4ddd0;
+  font:500 17px/1.5 var(--serif);
+}
+
+
+
+
+@media (max-width:800px){
+
+  .current-focus{
+    grid-template-columns:1fr;
+    gap:50px;
+    padding:80px 7vw;
+  }
+
+  .current-focus .focus-heading h2{
+    font-size:clamp(40px,11vw,58px);
+  }
+
+  .focus-meta{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .focus-history{
+    width:100%;
+  }
+
+  .focus-history-menu{
+    left:0;
+    right:auto;
+    bottom:auto;
+    top:calc(100% + 14px);
+  }
+
 }
