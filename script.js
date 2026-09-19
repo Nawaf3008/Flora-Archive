@@ -25,9 +25,6 @@ document.addEventListener('click', e => {
 });
 $('.menu-btn').addEventListener('click', () => $('.nav-links').classList.toggle('mobile'));
 
-const modal = $('#searchModal');
-const openSearch = () => { modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); $('#globalSearch').focus(); };
-$('.search-open').addEventListener('click', openSearch);
 $('.modal-close', modal).addEventListener('click', () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); });
 const archive = [
   ['Desert lavender', 'Species Archive · Native Plants'], ['Pollinator activity in Salvia officinalis', 'Field Journal · Pollination'], ['Life at the edge of water', 'Projects · Ecology'], ['Seed dispersal along the dry wadi', 'Field Journal · Desert']
@@ -37,7 +34,6 @@ $('#speciesSearch').addEventListener('click', () => { const q=$('#speciesInput')
 $('#speciesInput').addEventListener('keydown', e => {if(e.key==='Enter') $('#speciesSearch').click();});
 
 const lightbox=$('#lightbox'); $$('.gallery-grid img').forEach(img=>img.addEventListener('click',()=>{ $('img',lightbox).src=img.src; $('img',lightbox).alt=img.alt; lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden','false');})); $('.modal-close',lightbox).addEventListener('click',()=>lightbox.classList.remove('open'));
-$('#newsletterForm').addEventListener('submit',e=>{e.preventDefault(); $('#formNote').textContent=`Thank you — field notes will be sent to ${$('#email').value}.`; e.target.reset();});
 $('#year').textContent=new Date().getFullYear();
 const experimentalPlants = [
   {
@@ -170,4 +166,3 @@ clearArchiveSearch.addEventListener("click", () => {
 
 showPlantResults();
 
-}
