@@ -27,7 +27,6 @@ $('.menu-btn').addEventListener('click', () => $('.nav-links').classList.toggle(
 
 $('.modal-close', modal).addEventListener('click', () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); });
 const archive = [
-  ['Desert lavender', 'Species Archive · Native Plants'], ['Pollinator activity in Salvia officinalis', 'Field Journal · Pollination'], ['Life at the edge of water', 'Projects · Ecology'], ['Seed dispersal along the dry wadi', 'Field Journal · Desert']
 ];
 $('#globalSearch').addEventListener('input', e => { const q=e.target.value.toLowerCase().trim(); $('#searchResults').innerHTML = q ? archive.filter(x=>x.join(' ').toLowerCase().includes(q)).map(x=>`<a href="#journal"><strong>${x[0]}</strong><span>${x[1]}</span></a>`).join('') || '<p>No records found yet. Try a broader search.</p>' : '<p>Search across observations, species, research notes, projects, and resources.</p>'; });
 $('#speciesSearch').addEventListener('click', () => { const q=$('#speciesInput').value.trim(); if(q){openSearch(); $('#globalSearch').value=q; $('#globalSearch').dispatchEvent(new Event('input'));} });
