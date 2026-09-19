@@ -55,8 +55,8 @@ const experimentalPlants = [
   "experiment"
 ],
     information:
-      "An indoor physiological experiment observing how a variegated Ficus benjamina responds to stress, recovery, and changing care conditions.",
-    context: "Experimental plant · Indoor cultivation"
+      "One of the most dramatic and fussy plants behaves in an oddly resiliant form in my possession.",
+    context: "Used-and-Abused plant · Get a 4 in 1 deal . Data wipe plant"
   },
   {
     scientificName: "Vitex trifolia",
@@ -77,16 +77,16 @@ const experimentalPlants = [
   "experiment"
 ],
     information:
-      "An experimental plant being observed for its growth, resilience, and response to cultivation conditions over time.",
-    context: "Experimental plant · Cultivated observation"
+      "Popular outdoor plants in my area. Most variegated varieties of Vitex lose variegation due tu heat.",
+    context: "Variegated varieties are variegation-less · Resilient yet pathetic somehow . I like it but when wanting to be fair, it gets mogged by Vitex agnus-castus"
   },
   {
-    scientificName: "Schefflera arboricola",
+    scientificName: "Heptapleurum arboricola",
     commonName: "Dwarf umbrella tree",
-    keywords: ["schefflera", "umbrella tree", "dwarf umbrella", "indoor", "houseplant", "Umbrella tree", "Umbrella Tree", "Dwarf umbrella", "Houseplant", "Indoor"],
+    keywords: ["schefflera", "umbrella tree", "dwarf umbrella", "indoor", "houseplant", "Umbrella tree", "Umbrella Tree", "Dwarf umbrella", "Houseplant", "Indoor", "heptapleurum", "Heptapleurum"],
     information:
-      "An indoor experimental plant being monitored for leaf growth, light response, and general condition.",
-    context: "Experimental plant · Indoor cultivation"
+      "My biggest indoor plant. Currently trying to fix it from its leaning structure.",
+    context: "Indoor plant · Leaning Tower of Pisa . In need of pruning"
   }
 ];
 
